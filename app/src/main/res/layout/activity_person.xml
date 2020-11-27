@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    android:id="@+id/peronactivity"
+    android:orientation="vertical"
+    tools:context=".activity.PersonActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#009688">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:singleLine="true"
+                android:src="@drawable/back"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="保存"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="5dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight">
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/changephoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="头像"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_head_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/origin" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray7"/>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="5dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+    <RelativeLayout
+        android:id="@+id/rl_account"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:hint="    此处修改      "
+            android:layout_marginRight="5dp"
+            android:textColor="#a3a3a3"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="用户名"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray7"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <EditText
+                    android:id="@+id/qianming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="240dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:hint="    此处修改      "
+                    android:layout_marginRight="5dp"
+                    android:inputType="textMultiLine"
+                    android:textColor="#a3a3a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="个性签名"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray7"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="性别"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdg_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="25sp"
+                        android:text="男" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="25sp"
+                        android:text="女" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="5dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight">
+
+  <LinearLayout
+
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/text_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="心情墙"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+      <ImageView
+          android:id="@+id/beginning_person"
+          android:layout_width="match_parent"
+          android:layout_height="250dp"
+          android:scaleType="fitXY"
+          android:layout_marginBottom="10dp"
+          android:src="@color/biaotilan" />
+
+  </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
